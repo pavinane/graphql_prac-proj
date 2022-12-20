@@ -292,7 +292,7 @@
 
 
 module.exports= {
-    products,
-    categories,
-    reviews
+  products,
+  categories,
+  reviews
 }
