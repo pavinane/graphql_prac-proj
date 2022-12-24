@@ -2,6 +2,8 @@ const {gql} =  require('apollo-server');
 exports. typeDefs = gql`
 
 
+
+#  assign all query types stores here
 type Query {
   hello: String
   # numberOfAnimals:Int
@@ -10,10 +12,22 @@ type Query {
   products(
     filter: ProductsFilterInput 
   ):[Product!]!
+
   product(id:ID!):Product
+
   categories:[Category!]!
+  
   category(id:ID!):Category
+
+  users:[User!]!
+
+  user(id:ID!):User
 },
+
+
+
+# create query data here seperate
+
 type Product{
   id:ID!
   name:String!
@@ -24,6 +38,7 @@ type Product{
   category:Category
   reviews:[Review!]!
 }
+
 type Category{
   id:ID!
   name:String!
@@ -39,9 +54,20 @@ type Review{
   # productId:[Product!]!
 }
 
+
 input ProductsFilterInput{
   onSale:Boolean 
   avgRating:Int
 }
+
+type User {
+  id:ID!
+  name:String!
+  email:String!
+  phone:Int!
+  sex:String!
+
+}
+
 
 `;

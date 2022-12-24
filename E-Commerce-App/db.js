@@ -8,6 +8,7 @@
     image: "img-1",
     onSale: false,
     categoryId: "c01b1ff4-f894-4ef2-b27a-22aacc2fca70",
+    
   },
   {
     id: "c2af9adc-d0b8-4d44-871f-cef66f86f7f6",
@@ -18,6 +19,7 @@
     image: "img-2",
     onSale: false,
     categoryId: "c01b1ff4-f894-4ef2-b27a-22aacc2fca70",
+    
   },
   {
     id: "2c931e7e-510f-49e5-aed6-d6b44087e5a1",
@@ -28,6 +30,7 @@
     image: "img-3",
     onSale: true,
     categoryId: "c01b1ff4-f894-4ef2-b27a-22aacc2fca70",
+    
   },
 
 
@@ -40,6 +43,7 @@
     image: "img-4",
     onSale: false,
     categoryId: "34115aac-0ff5-4859-8f43-10e8db23602b",
+    
   },
   {
     id: "6379c436-9fad-4b3f-a427-2d7241f5c1b1",
@@ -50,6 +54,7 @@
     image: "img-5",
     onSale: true,
     categoryId: "34115aac-0ff5-4859-8f43-10e8db23602b",
+    
   },
 
 
@@ -291,8 +296,48 @@
 ];
 
 
+const users = [
+  {
+    id:"1",
+    name:"pavi",
+    email:"pavimegan77@gmail.com",
+    phone:9514567951,
+    sex:"male"
+  },
+  {
+    id:"2",
+    name:"nane",
+    email:"nane@gmail.com",
+    phone:9991594959,
+    sex:"male"
+  },
+  {
+    id:"3",
+    name:"sri ",
+    email:"sri@gmail.com",
+    phone:8075994655,
+    sex:"female"
+  },
+  {
+    id:"4",
+    name:"ammu",
+    email:"ammu@gmail.com",
+    phone:9514579554,
+    sex:"female"
+  },
+  {
+    id:"5",
+    name:"keerthi",
+    email:"keerthi@gmail.com",
+    phone:965745655,
+    sex:"male"
+  },
+
+]
+
 module.exports= {
   products,
   categories,
-  reviews
+  reviews,
+  users
 }
