@@ -45,9 +45,7 @@ exports.Query={
                     });
 
                     const  avgProductionRating = sumRating / numberOfReviews;
-
-                  
-
+                    console.log(avgProductionRating,product.name);
                     return  avgProductionRating >= avgRating;
                 })
             }

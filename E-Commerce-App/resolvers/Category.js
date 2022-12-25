@@ -5,6 +5,9 @@ exports.Category={
       const {products} = context;
       const categoryId = parent.id;  // parent.id is nothing that is category as a parent 
       // console.log(categoryId)
-      return products.filter((product) => product.categoryId === categoryId)
+      return products.filter((product) => product.categoryId === categoryId);
+
+
+      
     }
   }

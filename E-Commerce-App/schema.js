@@ -22,9 +22,15 @@ type Query {
   users:[User!]!
 
   user(id:ID!):User
-},
+}
 
+type Mutation {
+  addCategory(input:AddCategoryInput!):Category!
 
+  addProduct(input:AddProductInput!):Product!
+
+  addReview(input:AddReviewInput!):Review!
+}
 
 # create query data here seperate
 
@@ -39,10 +45,24 @@ type Product{
   reviews:[Review!]!
 }
 
+input AddProductInput{
+  name:String!
+  description:String!
+  quantity:Int!
+  price:Float!
+  onSale:Boolean!
+  categoryId:String!
+ 
+}
+
 type Category{
   id:ID!
   name:String!
   products:[Product!]!
+}
+
+input AddCategoryInput {
+  name:String!
 }
 
 type Review{
@@ -51,7 +71,16 @@ type Review{
   title:String!
   comment:String!
   rating:Int!
-  # productId:[Product!]!
+
+}
+
+input AddReviewInput {
+
+  date:String!
+  title:String!
+  comment:String!
+  rating:Int!
+  productId:ID!
 }
 
 
@@ -59,6 +88,8 @@ input ProductsFilterInput{
   onSale:Boolean 
   avgRating:Int
 }
+
+
 
 type User {
   id:ID!
